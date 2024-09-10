@@ -7,7 +7,8 @@ export default {
         roboto: ["Roboto", "sans-serif"],
       },
       colors: {
-        background: "#FAFAFC",
+        navbar: "#FAFAFC",
+        content: "#F5F5F7",
       },
     },
   },

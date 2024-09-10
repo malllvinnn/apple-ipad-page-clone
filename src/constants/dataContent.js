@@ -1,7 +1,7 @@
 const WELLCOME = [
   {
     title: "iPad",
-    subtitle: "Sentuh, gambar, dan ketik di satu perangkat istimewa",
+    sub_title: "Sentuh, gambar, dan ketik di satu perangkat istimewa.",
     video_url: "/videos/large_2x.mp4",
   },
 ];

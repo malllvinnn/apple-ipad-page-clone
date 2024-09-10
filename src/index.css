@@ -6,6 +6,6 @@
 
 @layer base {
   body {
-    @apply font-roboto text-base bg-slate-600;
+    @apply font-roboto text-base bg-[#FFFFFF];
   }
 }
