@@ -9,7 +9,7 @@ const WELLCOME = [
 const CONTENT_1 = [
   {
     title: "Kenali iPad lebih dalam",
-    card: [
+    cards: [
       {
         title_card: "Tempat kerja Anda\n bisa di mana saya.",
         title_card_sh: "Tempat kerja Anda bisa di mana saya.",
