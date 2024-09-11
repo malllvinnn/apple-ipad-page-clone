@@ -1,6 +1,6 @@
-const ContentLayout = ({ index, children }) => {
+const ContentLayout = ({ index, children, bg, pt }) => {
   return (
-    <section key={index} className="pt-[90px]">
+    <section key={index} className={`${bg} ${pt}  mt-[90px]`}>
       {children}
     </section>
   );

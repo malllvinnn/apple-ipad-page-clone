@@ -174,7 +174,7 @@ const CONTENT_1 = [
 
 const CONTENT_2 = [
   {
-    title: "Jelajahi jajarannya",
+    title: "Jelajahi jajarannya.",
     device_types: [
       {
         type: "iPad Pro",
