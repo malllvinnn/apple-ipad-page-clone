@@ -8,13 +8,14 @@ import "swiper/css/pagination";
 
 import { CONTENT_1 } from "../../../constants/dataContent";
 import { SwiperSlide, Swiper } from "swiper/react";
-import { Pagination } from "swiper/modules";
 import { HiMiniPlusSmall } from "react-icons/hi2";
-import { useState } from "react";
-import { GrFormClose } from "react-icons/gr";
+import { useRef, useState } from "react";
+import { GrFormClose, GrFormNext, GrFormPrevious } from "react-icons/gr";
 
 const KnowMore = () => {
   const [selectModal, setSelectModal] = useState(null);
+
+  const swiperRef = useRef(null);
 
   const handleOpenModal = (modalData) => {
     setSelectModal(modalData);
@@ -36,13 +37,9 @@ const KnowMore = () => {
           </HeaderContent>
           <div className="max-w-full h-[680px] relative left-[6.5%]">
             <Swiper
+              ref={swiperRef}
               slidesPerView={3.8}
               spaceBetween={30}
-              centeredSlides={false}
-              pagination={{
-                clickable: false,
-              }}
-              modules={[Pagination]}
               className="mySwiper"
             >
               {item.cards.map((card, index) => (
@@ -124,6 +121,20 @@ const KnowMore = () => {
                 </SwiperSlide>
               ))}
             </Swiper>
+          </div>
+          <div className="flex justify-end pt-8 px-24 gap-6">
+            <button
+              onClick={() => swiperRef.current?.swiper.slidePrev()}
+              className="bg-[#E9E9EB] rounded-full"
+            >
+              <GrFormPrevious size={35} />
+            </button>
+            <button
+              onClick={() => swiperRef.current?.swiper.slideNext()}
+              className="bg-[#E9E9EB] rounded-full"
+            >
+              <GrFormNext size={35} />
+            </button>
           </div>
         </ContentLayout>
       )}
