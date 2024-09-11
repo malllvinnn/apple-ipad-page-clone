@@ -47,6 +47,7 @@ const KnowMore = () => {
               spaceBetween={30}
               initialSlide={1}
               centeredSlides={true}
+              allowTouchMove={false}
               onSlideChange={handleSlideChange}
               className="mySwiper"
             >

@@ -1,19 +1,27 @@
-import React from "react";
-import ContentLayout from "../../Layouts/ContentLayout";
+import React, { useEffect, useRef, useState } from "react";
 import EachUtils from "../../../utils/EachUtils";
-import { CONTENT_2 } from "../../../constants/dataContent";
+import ContentLayout from "../../Layouts/ContentLayout";
 import HeaderContent from "../../Layouts/HeaderContent";
 import TitleContent from "../TitleContent";
-import { GrFormNext } from "react-icons/gr";
-import { Grid, Pagination } from "swiper/modules";
-import { SwiperSlide, Swiper } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/pagination";
 
+import { SwiperSlide, Swiper } from "swiper/react";
+import { Grid } from "swiper/modules";
+import { GrFormNext, GrFormPrevious } from "react-icons/gr";
+import { CONTENT_2 } from "../../../constants/dataContent";
+
 const Explore = () => {
+  const [activeSlide, setActiveSlide] = useState(1);
+  const swiperRef = useRef(null);
+
+  const handleSlideChange = () => {
+    setActiveSlide(swiperRef.current.swiper.activeIndex);
+  };
+
   return (
     <EachUtils
       of={CONTENT_2}
@@ -33,17 +41,17 @@ const Explore = () => {
           </HeaderContent>
           <div className="">
             <Swiper
+              ref={swiperRef}
+              onSlideChange={handleSlideChange}
               slidesPerView={3.8}
               centeredSlides={true}
               initialSlide={1}
+              allowTouchMove={false}
               grid={{
                 rows: 1,
               }}
               spaceBetween={0}
-              pagination={{
-                clickable: true,
-              }}
-              modules={[Grid, Pagination]}
+              modules={[Grid]}
               className="mySwiper"
             >
               {item.device_types.map((device, index) => (
@@ -182,6 +190,26 @@ const Explore = () => {
                 </SwiperSlide>
               ))}
             </Swiper>
+          </div>
+          <div className="flex justify-end pt-8 px-24 gap-6">
+            <button
+              onClick={() => swiperRef.current.swiper.slidePrev()}
+              disabled={activeSlide === 1}
+              className={`bg-[#E9E9EB] rounded-full ${
+                activeSlide === 1 ? "opacity-50 cursor-not-allowed" : ""
+              }`}
+            >
+              <GrFormPrevious size={35} />
+            </button>
+            <button
+              onClick={() => swiperRef.current.swiper.slideNext()}
+              disabled={activeSlide >= 2}
+              className={`bg-[#E9E9EB] rounded-full ${
+                activeSlide >= 2 ? "opacity-50 cursor-not-allowed" : ""
+              }`}
+            >
+              <GrFormNext size={35} />
+            </button>
           </div>
         </ContentLayout>
       )}
