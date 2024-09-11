@@ -13,9 +13,14 @@ import { useRef, useState } from "react";
 import { GrFormClose, GrFormNext, GrFormPrevious } from "react-icons/gr";
 
 const KnowMore = () => {
+  const [activeSlide, setActiveSlide] = useState(1);
   const [selectModal, setSelectModal] = useState(null);
 
   const swiperRef = useRef(null);
+
+  const handleSlideChange = () => {
+    setActiveSlide(swiperRef.current.swiper.activeIndex);
+  };
 
   const handleOpenModal = (modalData) => {
     setSelectModal(modalData);
@@ -35,11 +40,14 @@ const KnowMore = () => {
           <HeaderContent>
             <TitleContent tsz={"text-[56px]"}>{item.title}</TitleContent>
           </HeaderContent>
-          <div className="max-w-full h-[680px] relative left-[6.5%]">
+          <div className="max-w-full h-[680px] relative">
             <Swiper
               ref={swiperRef}
-              slidesPerView={3.8}
+              slidesPerView={4}
               spaceBetween={30}
+              initialSlide={1}
+              centeredSlides={true}
+              onSlideChange={handleSlideChange}
               className="mySwiper"
             >
               {item.cards.map((card, index) => (
@@ -124,14 +132,20 @@ const KnowMore = () => {
           </div>
           <div className="flex justify-end pt-8 px-24 gap-6">
             <button
-              onClick={() => swiperRef.current?.swiper.slidePrev()}
-              className="bg-[#E9E9EB] rounded-full"
+              onClick={() => swiperRef.current.swiper.slidePrev()}
+              disabled={activeSlide === 1}
+              className={`bg-[#E9E9EB] rounded-full ${
+                activeSlide === 1 ? "opacity-50 cursor-not-allowed" : ""
+              }`}
             >
               <GrFormPrevious size={35} />
             </button>
             <button
-              onClick={() => swiperRef.current?.swiper.slideNext()}
-              className="bg-[#E9E9EB] rounded-full"
+              onClick={() => swiperRef.current.swiper.slideNext()}
+              disabled={activeSlide >= 4}
+              className={`bg-[#E9E9EB] rounded-full ${
+                activeSlide >= 4 ? "opacity-50 cursor-not-allowed" : ""
+              }`}
             >
               <GrFormNext size={35} />
             </button>
