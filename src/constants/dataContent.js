@@ -306,7 +306,7 @@ const CONTENT_2 = [
 const CONTENT_3 = [
   {
     title: "Aksesori penting untuk iPad.",
-    card: [
+    cards: [
       {
         card_title: "Apple pencil",
         description: "Dari kepala. Turun ke layar",

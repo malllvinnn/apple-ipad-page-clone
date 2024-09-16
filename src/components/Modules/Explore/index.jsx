@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import EachUtils from "../../../utils/EachUtils";
 import ContentLayout from "../../Layouts/ContentLayout";
 import HeaderContent from "../../Layouts/HeaderContent";
@@ -26,7 +26,7 @@ const Explore = () => {
     <EachUtils
       of={CONTENT_2}
       render={(item, index) => (
-        <ContentLayout index={index} bg={"bg-content"} pt={"pt-[150px]"}>
+        <ContentLayout index={index} bg={"bg-content"} py={"py-[150px]"}>
           <HeaderContent>
             <TitleContent tsz={"text-[56px]"}>{item.title}</TitleContent>
             <div className="flex items-end pb-4">
