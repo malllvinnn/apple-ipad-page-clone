@@ -390,7 +390,7 @@ const CONTENT_5 = [
         link_url: "#",
       },
     ],
-    more: [
+    mores: [
       {
         sub_title: "Dukungan iPad",
         link_url: "#",

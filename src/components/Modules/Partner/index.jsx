@@ -12,7 +12,7 @@ const Partner = () => {
     <EachUtils
       of={CONTENT_4}
       render={(item, index) => (
-        <ContentLayout index={index} pb={"pb-[150px]"}>
+        <ContentLayout index={index}>
           <HeaderContent>
             <TitleContent tsz={"text-[56px]"}>{item.title}</TitleContent>
           </HeaderContent>
