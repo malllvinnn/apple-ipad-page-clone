@@ -325,7 +325,7 @@ const CONTENT_3 = [
 
 const CONTENT_4 = [
   {
-    title: "Pasang sempurna.",
+    title: "Pasangan sempurna.",
     accordion: [
       {
         sub_title: "iPad dan iPhone",
