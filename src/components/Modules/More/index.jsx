@@ -10,7 +10,11 @@ const More = () => {
     <EachUtils
       of={CONTENT_5}
       render={(item, index) => (
-        <ContentLayout index={index} bg={"bg-content"} py={"py-[150px]"}>
+        <ContentLayout
+          index={index}
+          bg={"bg-gradient-to-b from-[#F5F5F7] to-white"}
+          py={"py-[150px]"}
+        >
           <HeaderContent>
             <TitleContent tsz={"text-[48px]"}>{item.title}</TitleContent>
           </HeaderContent>
@@ -22,7 +26,9 @@ const More = () => {
                   <li key={index}>
                     <a
                       href={exp.link_url}
-                      className="text-[28px] font-medium hover:brightness-200"
+                      className={`${
+                        [7, 8].includes(index) ? "text-sm" : "text-[28px]"
+                      } font-medium hover:brightness-200`}
                     >
                       {exp.sub_title}
                     </a>

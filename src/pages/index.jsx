@@ -1,6 +1,7 @@
 import MainLayout from "../components/Layouts/MainLayout.jsx";
 import Accessories from "../components/Modules/Accessories/index.jsx";
 import Explore from "../components/Modules/Explore/index.jsx";
+import Footer from "../components/Modules/Footer/index.jsx";
 import Hero from "../components/Modules/Hero/index.jsx";
 import KnowMore from "../components/Modules/KnowMore/index.jsx";
 import More from "../components/Modules/More/index.jsx";
@@ -19,6 +20,7 @@ const Landing = () => {
         <Partner />
         <More />
       </MainLayout>
+      <Footer />
     </>
   );
 };
