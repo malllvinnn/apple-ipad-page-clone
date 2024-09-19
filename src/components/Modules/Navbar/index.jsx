@@ -3,6 +3,7 @@ import { LIST_NAVBAR, LIST_PRODUCT } from "../../../constants/dataHeader";
 import EachUtils from "../../../utils/EachUtils";
 import { GoSearch } from "react-icons/go";
 import HoverMac from "./HoverMac";
+import HoveriPad from "./HoveriPad";
 
 const Navbar = () => {
   return (
@@ -28,6 +29,7 @@ const Navbar = () => {
                   {item.link}
                 </a>
                 {[0].includes(index) && <HoverMac />}
+                {[1].includes(index) && <HoveriPad />}
               </li>
             )}
           />
