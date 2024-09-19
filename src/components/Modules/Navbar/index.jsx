@@ -2,6 +2,7 @@ import { FaApple } from "react-icons/fa6";
 import { LIST_NAVBAR, LIST_PRODUCT } from "../../../constants/dataHeader";
 import EachUtils from "../../../utils/EachUtils";
 import { GoSearch } from "react-icons/go";
+import HoverMac from "./HoverMac";
 
 const Navbar = () => {
   return (
@@ -19,13 +20,14 @@ const Navbar = () => {
           <EachUtils
             of={LIST_NAVBAR}
             render={(item, index) => (
-              <li key={index} className="h-full">
+              <li key={index} className="h-full group">
                 <a
                   href={item.url}
                   className="text-xs px-2 flex items-center h-full"
                 >
                   {item.link}
                 </a>
+                {[0].includes(index) && <HoverMac />}
               </li>
             )}
           />

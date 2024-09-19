@@ -13,5 +13,18 @@ export default {
       },
     },
   },
-  plugins: [daisyui],
+  plugins: [
+    daisyui,
+    function ({ addUtilities }) {
+      addUtilities({
+        ".hide-scrollbar": {
+          /* Hide scrollbar for WebKit browsers (Chrome, Safari) */
+          "::-webkit-scrollbar": { display: "none" },
+          /* Hide scrollbar for Firefox */
+          "-ms-overflow-style": "none",
+          "scrollbar-width": "none",
+        },
+      });
+    },
+  ],
 };
