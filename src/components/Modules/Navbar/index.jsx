@@ -1,8 +1,10 @@
+import React from "react";
+import EachUtils from "../../../utils/EachUtils";
+import HoverNav from "./HoveNav";
+
 import { FaApple } from "react-icons/fa6";
 import { LIST_NAVBAR, LIST_PRODUCT } from "../../../constants/dataHeader";
-import EachUtils from "../../../utils/EachUtils";
 import { GoSearch } from "react-icons/go";
-import HoverNav from "./HoveNav";
 
 const Navbar = () => {
   return (
@@ -41,7 +43,7 @@ const Navbar = () => {
           </a>
         </div>
       </nav>
-      <nav className="pt-4 w-full">
+      <nav className="pt-4 w-full" data-aos="fade-left" data-aos-delay="300">
         <ul className="flex w-full h-full justify-center gap-12 pb-12">
           <EachUtils
             of={LIST_PRODUCT}

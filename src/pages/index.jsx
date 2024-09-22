@@ -1,3 +1,7 @@
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import MainLayout from "../components/Layouts/MainLayout.jsx";
 import Accessories from "../components/Modules/Accessories/index.jsx";
 import Explore from "../components/Modules/Explore/index.jsx";
@@ -9,6 +13,14 @@ import Navbar from "../components/Modules/Navbar/index.jsx";
 import Partner from "../components/Modules/Partner/index.jsx";
 
 const Landing = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+      once: true,
+    });
+    AOS.refresh();
+  }, []);
+
   return (
     <>
       <Navbar />
