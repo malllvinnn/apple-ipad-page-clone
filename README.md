@@ -1,8 +1,26 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Apple iPad Landing Page Clone
 
-Currently, two official plugins are available:
+This project is a clone of the official Apple iPad landing page, created to practice and showcase skills in modern web development. The clone replicates the design, layout, and interactive features of Apple's iPad 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> **Note:** This project is not yet responsive and is currently designed for a screen width of 1440px only.
+
+## Demo
+
+[Vercel Link](#)
+
+
+## Screenshots
+
+![App Screenshot](/public/images/127.0.0.1_5173_.png)
+
+
+## Tech Stack
+
+**Client:** React, TailwindCSS, AOS, Jotai, React Icons, React Player, Swiper
+
+
+## Authors
+
+- [@malllvinnn](https://www.instagram.com/malllvinnn/)
+
