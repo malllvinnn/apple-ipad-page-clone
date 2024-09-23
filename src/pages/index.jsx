@@ -16,8 +16,8 @@ const Landing = () => {
   useEffect(() => {
     AOS.init({
       duration: 1200,
+      once: true,
     });
-    AOS.refresh();
   }, []);
 
   return (
