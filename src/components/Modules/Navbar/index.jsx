@@ -43,7 +43,7 @@ const Navbar = () => {
           </a>
         </div>
       </nav>
-      <nav className="pt-4 w-full" data-aos="fade-left" data-aos-delay="300">
+      <nav className="pt-4 w-full" data-aos="fade-left" data-aos-duration="500">
         <ul className="flex w-full h-full justify-center gap-12 pb-12">
           <EachUtils
             of={LIST_PRODUCT}

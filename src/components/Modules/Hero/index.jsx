@@ -18,11 +18,19 @@ const Hero = () => {
         <ContentLayout index={index}>
           <HeaderContent>
             <TitleContent tsz={"text-[80px]"}>{item.title}</TitleContent>
-            <h3 className="flex items-end text-[28px] pb-2 font-semibold">
+            <h3
+              className="flex items-end text-[28px] pb-2 font-semibold"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
               {item.sub_title}
             </h3>
           </HeaderContent>
-          <div className="max-w-[1260px] mx-auto relative overflow-hidden rounded-[40px]">
+          <div
+            className="max-w-[1260px] mx-auto relative overflow-hidden rounded-[40px]"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
             <ReactPlayer
               url={item.video_url}
               muted={true}

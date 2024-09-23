@@ -1,3 +1,4 @@
+import React, { useRef, useState } from "react";
 import EachUtils from "../../../utils/EachUtils";
 import ContentLayout from "../../Layouts/ContentLayout";
 import HeaderContent from "../../Layouts/HeaderContent";
@@ -9,7 +10,6 @@ import "swiper/css/pagination";
 import { CONTENT_1 } from "../../../constants/dataContent";
 import { SwiperSlide, Swiper } from "swiper/react";
 import { HiMiniPlusSmall } from "react-icons/hi2";
-import { useRef, useState } from "react";
 import { GrFormClose, GrFormNext, GrFormPrevious } from "react-icons/gr";
 
 const KnowMore = () => {
@@ -55,6 +55,21 @@ const KnowMore = () => {
                 <SwiperSlide
                   key={index}
                   className="relative overflow-hidden rounded-3xl"
+                  data-aos="fade-up"
+                  data-aos-mirror="false"
+                  data-aos-delay={
+                    [0].includes(index)
+                      ? "100"
+                      : [1].includes(index)
+                      ? "200"
+                      : [2].includes(index)
+                      ? "300"
+                      : [3].includes(index)
+                      ? "400"
+                      : [4].includes(index)
+                      ? "500"
+                      : "600"
+                  }
                 >
                   <img
                     src={card.image_url}
