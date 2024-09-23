@@ -22,6 +22,8 @@ const Accessories = () => {
                 className={`${
                   index === 1 ? "flex-col-reverse" : "flex-col"
                 } bg-white flex justify-between rounded-3xl`}
+                data-aos="fade-up"
+                data-aos-delay={`${index * 200}`}
               >
                 <div className="p-8">
                   <div

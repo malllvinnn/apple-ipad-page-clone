@@ -21,7 +21,7 @@ const Hero = () => {
             <h3
               className="flex items-end text-[28px] pb-2 font-semibold"
               data-aos="fade-up"
-              data-aos-delay="300"
+              data-aos-delay="200"
             >
               {item.sub_title}
             </h3>

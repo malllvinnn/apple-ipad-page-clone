@@ -29,7 +29,11 @@ const Explore = () => {
         <ContentLayout index={index} bg={"bg-content"} py={"py-[150px]"}>
           <HeaderContent>
             <TitleContent tsz={"text-[56px]"}>{item.title}</TitleContent>
-            <div className="flex items-end pb-4">
+            <div
+              className="flex items-end pb-4"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               <a
                 href="#"
                 className="flex items-center justify-center text-blue-700 hover:brightness-150"
@@ -56,7 +60,11 @@ const Explore = () => {
             >
               {item.device_types.map((device, index) => (
                 <SwiperSlide key={index} className="relative -left-6">
-                  <div className="text-center">
+                  <div
+                    className="text-center"
+                    data-aos="fade-up"
+                    data-aos-delay={`${index * 100}`}
+                  >
                     <div className="flex flex-col gap-8">
                       <div className="flex justify-center items-center">
                         <img

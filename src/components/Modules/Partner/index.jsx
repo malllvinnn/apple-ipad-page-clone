@@ -17,7 +17,11 @@ const Partner = () => {
             <TitleContent tsz={"text-[56px]"}>{item.title}</TitleContent>
           </HeaderContent>
           <div className="flex bg-content max-w-[1260px] h-[830px] mx-auto rounded-3xl">
-            <div className="py-[120px] px-[90px] w-2/5">
+            <div
+              className="py-[120px] px-[90px] w-2/5"
+              data-aos="fade-up"
+              data-aos-delay={`200`}
+            >
               {item.accordion.map((acc, index) => (
                 <div key={index}>
                   <div className="collapse collapse-arrow">
@@ -38,7 +42,11 @@ const Partner = () => {
                 </div>
               ))}
             </div>
-            <div className="w-3/5 relative overflow-hidden flex items-center h-auto">
+            <div
+              className="w-3/5 relative overflow-hidden flex items-center h-auto"
+              data-aos="fade-up"
+              data-aos-delay={`400`}
+            >
               <div className="w-[1090px] h-[769px] absolute">
                 <picture>
                   <img
