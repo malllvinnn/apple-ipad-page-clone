@@ -4,8 +4,18 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  @apply bg-content
+}
+
 @layer base {
   body {
-    @apply font-roboto text-base bg-[#FFFFFF];
+    @apply font-roboto text-base bg-[#FFFFFF] text-[#1D1D1F];
   }
 }
+
+.swiper {
+  @apply w-[100%] h-[100%]
+}
+
+

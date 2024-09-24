@@ -9,7 +9,7 @@ const WELLCOME = [
 const CONTENT_1 = [
   {
     title: "Kenali iPad lebih dalam",
-    card: [
+    cards: [
       {
         title_card: "Tempat kerja Anda\n bisa di mana saya.",
         title_card_sh: "Tempat kerja Anda bisa di mana saya.",
@@ -174,7 +174,7 @@ const CONTENT_1 = [
 
 const CONTENT_2 = [
   {
-    title: "Jelajahi jajarannya",
+    title: "Jelajahi jajarannya.",
     device_types: [
       {
         type: "iPad Pro",
@@ -288,14 +288,14 @@ const CONTENT_2 = [
             camera: ["Kamera Wide 12 MP", "Video 4K"],
             icon_camera_url: "/icons/ipadair13_gen6_camera.png",
             front_camera: ["Kamera depan Ultra Wide 12 MP"],
-            icon_front_camera_url: "/public/icons/ipad_front_camera__dan9.png",
+            icon_front_camera_url: "/icons/ipad_front_camera__dan9.png",
             pencil: [
               "Mendukung Apple Pencil (generasi ke-2)",
               "Mendukung Apple Pencil (USB-C)",
             ],
             icon_pencil_url: "/icons/applepencil_vertical_gen4_gen3.png",
             keyboard: "Mendukung papan ketik Bluetooth",
-            icon_keyboard_url: "/public/icons/magickeyboard__bn.png",
+            icon_keyboard_url: "/icons/magickeyboard__bn.png",
           },
         ],
       },
@@ -306,7 +306,7 @@ const CONTENT_2 = [
 const CONTENT_3 = [
   {
     title: "Aksesori penting untuk iPad.",
-    card: [
+    cards: [
       {
         card_title: "Apple pencil",
         description: "Dari kepala. Turun ke layar",
@@ -325,7 +325,7 @@ const CONTENT_3 = [
 
 const CONTENT_4 = [
   {
-    title: "Pasang sempurna.",
+    title: "Pasangan sempurna.",
     accordion: [
       {
         sub_title: "iPad dan iPhone",
@@ -390,7 +390,7 @@ const CONTENT_5 = [
         link_url: "#",
       },
     ],
-    more: [
+    mores: [
       {
         sub_title: "Dukungan iPad",
         link_url: "#",

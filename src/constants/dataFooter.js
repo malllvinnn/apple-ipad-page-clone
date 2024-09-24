@@ -177,43 +177,30 @@ const FOOTER_LIST = [
   },
 ];
 
-const FOOTER_RETAIL = [
-  {
-    parag_1: "Temukan retailer",
-    parag_2: "didekat Anda.",
-    link_url: "#",
-  },
-];
-
 const AUTHOR = [
   {
     author_name: "@malllvinnn",
-    year_created: "2024",
+    description: "Designed and developed with 💻 & ☕ by",
   },
 ];
 
 const PRIVASI = [
-  { language: "Indonesia" },
   {
-    privasi: [
-      {
-        res: "Kebijakan Privasi",
-        link_url: "#",
-      },
-      {
-        res: "Ketentuan Penggunaan",
-        link_url: "#",
-      },
-      {
-        res: "Legal",
-        link_url: "#",
-      },
-      {
-        res: "Peta Situs",
-        link_url: "#",
-      },
-    ],
+    res: "Kebijakan Privasi",
+    link_url: "#",
+  },
+  {
+    res: "Ketentuan Penggunaan",
+    link_url: "#",
+  },
+  {
+    res: "Legal",
+    link_url: "#",
+  },
+  {
+    res: "Peta Situs",
+    link_url: "#",
   },
 ];
 
-export { AUTHOR, FOOTER_LIST, FOOTER_RETAIL, FOOTNOTE, FOOTNOTE_LIST, PRIVASI };
+export { AUTHOR, FOOTER_LIST, FOOTNOTE, FOOTNOTE_LIST, PRIVASI };
